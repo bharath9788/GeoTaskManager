@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Tracker</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@3.0.3/dist/esri-leaflet.js"
+    integrity="sha512-kuYkbOFCV/SsxrpmaCRMEFmqU08n6vc+TfAVlIKjR1BPVgt75pmtU9nbQll+4M9PN2tmZSAgD1kGUCKL88CscA=="
+    crossorigin=""></script>
+
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@3.1.1/dist/esri-leaflet-geocoder.css"
+    integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+    crossorigin="">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@3.1.1/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-enHceDibjfw6LYtgWU03hke20nVTm+X5CRi9ity06lGQNtC9GkBNl/6LoER6XzSudGiXy++avi1EbIg9Ip4L1w=="
+    crossorigin=""></script>
+
+  <script src="https://kit.fontawesome.com/4279cb540e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="information">
+      <form class="task--form display--form">
+        <label for="task">Task</label>
+        <input type="text" id="task" placeholder="Provide a name for your task">
+        <label for="taskDate">Task date</label>
+        <input type="date" id="taskDate" name="taskDate" />
+        <label for="location">Location</label>
+        <input type="textarea" id="location" name="location" placeholder="Where the task needs to be done">
+        <input type="hidden" id="location--lat" name="location--lat">
+        <input type="hidden" id="location--lang" name="location--lang">
+        <input class="save-btn" value="Save" type="button">
+      </form>
+
+      <!-- 
+      <div class="task">
+        <ul class="u">
+          <li id="task--name">be used to</li>
+          <li id="task--date">replace bullets</li>
+          <li id="task--location">replace bullets</li>
+        </ul>
+      </div> -->
+
+    </div>
+    <div id="map"></div>
+
+
+  </div>
+  <script src="scripts/script.js" type="text/javascript"></script>
+
+  <footer class="footer">
+    <div class="name">
+      <h3>Bharath Kumar Amarnath</h3>
+    </div>
+
+    <div class="copyright--block">
+      <p class="copyright">
+        &copy; Copyright by
+        <a class="linkedin-link" target="_blank" href="https://www.linkedin.com/in/bharath-kumar-amarnath-01b8361b/">Bharath Kumar Amarnath</a>.
+        This is my Pet Project. There are a few bugs.
+      </p>
+    </div>
+
+    <div class="contact">
+      <i class="fab fa-linkedin" style="font-size:25px;color:rgb(243, 243, 243);text-shadow:2px 2px 4px #000000;"></i>
+      <i class="fab fa-github" style="font-size:25px;color:rgb(243, 243, 243);text-shadow:2px 2px 4px #000000;"></i>
+    </div>
+  </footer>
+</body>
+
+</html>
